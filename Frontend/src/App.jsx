@@ -10,7 +10,7 @@ const App = () => {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:3000/api', { url });
+      const response = await axios.post('https://url-shortner-1tow.onrender.com/api', { url });
       if (response.data.success) {
         setShortUrl(response.data.id)
         getUrls();
@@ -24,7 +24,7 @@ const App = () => {
   const getUrls = async () => {
     
     try {
-      const response = await axios.get('http://localhost:3000/api/urls');
+      const response = await axios.get('https://url-shortner-1tow.onrender.com/api/urls');
       if (response.data.success) {
         setData(response.data.result)
         console.log(response.data.result)
@@ -45,7 +45,7 @@ const App = () => {
   const openUrl = async (shortId) => {
 
     try {
-      window.open(`http://localhost:3000/api/${shortId}`, "_blank");
+      window.open(`https://url-shortner-1tow.onrender.com/api/${shortId}`, "_blank");
       getUrls();
 
     } catch (error) {
