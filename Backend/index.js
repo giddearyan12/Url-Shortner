@@ -6,7 +6,7 @@ import router from './routes/url.js'
 const port = 3000
 app.use(express.json())
 app.use(cors({
-    origin:"http://localhost:5173"
+    origin:"https://url-shortner-azure-eight.vercel.app"
 }))
 
 mongoose.connect('mongodb+srv://giddearyan222:atikaryan12@cluster0.c9rza2d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',()=>{
