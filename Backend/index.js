@@ -9,7 +9,7 @@ app.use(cors({
     origin:"http://localhost:5173"
 }))
 
-mongoose.connect('mongodb://localhost:27017/url',()=>{
+mongoose.connect('mongodb+srv://giddearyan222:atikaryan12@cluster0.c9rza2d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',()=>{
     console.log('MongoDB Connected');
 })
 
