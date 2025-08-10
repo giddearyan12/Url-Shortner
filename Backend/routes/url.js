@@ -4,7 +4,7 @@ import {getUrls, handleGet, handleNewUrl} from "../controllers/url.js";
 const router = express.Router();
 
 router.post("/", handleNewUrl);
-router.get("/urls", getUrls);
+router.post("/urls", getUrls);
 
 router.get("/:shortId", handleGet);
 
