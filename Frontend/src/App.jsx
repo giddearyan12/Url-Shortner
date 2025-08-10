@@ -24,7 +24,7 @@ const App = () => {
   const getUrls = async () => {
     
     try {
-      const response = await axios.get('https://url-shortner-1tow.onrender.com/api/urls');
+      const response = await axios.post('https://url-shortner-1tow.onrender.com/api/urls');
       if (response.data.success) {
         setData(response.data.result)
         console.log(response.data.result)
