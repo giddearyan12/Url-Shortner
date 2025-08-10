@@ -8,6 +8,10 @@ async function handleNewUrl(req, res) {
     return res.status(400).json({ error: "url is required" });
   } 
   const shortID = shortid();
+    const existing = await URL.findOne({ redirectURL: body.url });
+  if (existing) {
+    return res.json({ success: true, id: existing.shortId });
+  }
   
 
   const url = await URL({
