@@ -9,9 +9,13 @@ app.use(cors({
     origin:"https://url-shortner-azure-eight.vercel.app"
 }))
 
-mongoose.connect('mongodb+srv://giddearyan222:atikaryan12@cluster0.c9rza2d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',()=>{
-    console.log('MongoDB Connected');
-})
+mongoose.connect(
+  'mongodb+srv://giddearyan222:atikaryan12@cluster0.c9rza2d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+).then(() => {
+  console.log('MongoDB Connected');
+}).catch(err => {
+  console.error('MongoDB connection error:', err);
+});
 
 app.use('/api', router)
 
